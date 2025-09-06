@@ -13,7 +13,7 @@ const AdminLogin = () => {
 
     try {
       const { data } = await axios.post(
-        "https://feastify-v385.onrender.com/api/v1/admin/login",
+        "https://feastifybackend.onrender.com/api/v1/admin/login",
         {
           email,
           password,

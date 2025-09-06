@@ -13,8 +13,8 @@ const Login = () => {
     e.preventDefault();
 
     const url = isAdmin
-      ? "https://feastify-v385.onrender.com/api/v1/admin/login"
-      : "https://feastify-v385.onrender.com/api/v1/user/login";
+      ? "https://feastifybackend.onrender.com/api/v1/admin/login"
+      : "https://feastifybackend.onrender.com/api/v1/user/login";
 
     try {
       const { data } = await axios.post(url, { email, password });
@@ -63,7 +63,10 @@ const Login = () => {
         >
           Login
         </h2>
-        <form onSubmit={handleLogin} style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
+        <form
+          onSubmit={handleLogin}
+          style={{ display: "flex", flexDirection: "column", gap: "15px" }}
+        >
           <input
             type="email"
             placeholder="Enter email"
@@ -90,7 +93,9 @@ const Login = () => {
               fontSize: "15px",
             }}
           />
-          <label style={{ fontSize: "14px", display: "flex", alignItems: "center" }}>
+          <label
+            style={{ fontSize: "14px", display: "flex", alignItems: "center" }}
+          >
             <input
               type="checkbox"
               checked={isAdmin}

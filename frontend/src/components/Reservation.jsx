@@ -27,7 +27,7 @@ const Reservation = () => {
 
     try {
       const { data } = await axios.post(
-        "https://feastify-v385.onrender.com/api/v1/reservation/send",
+        "https://feastifybackend.onrender.com/api/v1/reservation/send",
         { firstName, lastName, email, phone, date, time, guests },
         {
           headers: {

@@ -10,7 +10,7 @@ const AdminDashboard = () => {
     const fetchBookings = async () => {
       try {
         const { data } = await axios.get(
-          "https://feastify-v385.onrender.com/api/v1/admin/bookings",
+          "https://feastifybackend.onrender.com/api/v1/admin/bookings",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
