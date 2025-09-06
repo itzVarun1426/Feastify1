@@ -12,10 +12,13 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const { data } = await axios.post("http://localhost:4000/api/v1/admin/login", {
-        email,
-        password,
-      });
+      const { data } = await axios.post(
+        "https://feastify-v385.onrender.com/api/v1/admin/login",
+        {
+          email,
+          password,
+        }
+      );
 
       toast.success(data.message || "Login successful!");
       localStorage.setItem("adminToken", data.token);
@@ -26,7 +29,10 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="auth-container" style={{ maxWidth: "400px", margin: "auto", padding: "2rem" }}>
+    <div
+      className="auth-container"
+      style={{ maxWidth: "400px", margin: "auto", padding: "2rem" }}
+    >
       <h2>Admin Login</h2>
       <form onSubmit={handleLogin}>
         <input
